@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'eu.binflux'
+version '1.0'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://jitpack.io"
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    implementation 'org.apache.commons:commons-pool2:2.9.0'
+
+    implementation 'org.mapdb:elsa:3.0.0-M7'
+    implementation 'com.caucho:hessian:4.0.38'
+    implementation 'com.github.romix:quickser:master-SNAPSHOT'
+    implementation 'de.ruedigermoeller:fst:2.56'
+    implementation 'com.esotericsoftware:kryo:5.0.0-RC9'
+}
