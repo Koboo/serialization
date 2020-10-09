@@ -3,21 +3,22 @@ package eu.binflux.serializer;
 import org.apache.commons.pool2.impl.GenericObjectPool;
 
 
-public class SerializerPool extends GenericObjectPool {
+public class SerializerPool {
 
+    final GenericObjectPool pool;
     final Class<? extends Serialization> classOfSerial;
 
     public SerializerPool(Class<? extends Serialization> classOfSerial) {
-        super(new SerializerFactory(classOfSerial));
+        this.pool = new GenericObjectPool(new SerializerFactory(classOfSerial));
         this.classOfSerial = classOfSerial;
     }
 
     private Serialization obtain() throws Exception {
-        return classOfSerial.cast(borrowObject());
+        return classOfSerial.cast(pool.borrowObject());
     }
 
     private void free(Serialization serialization) {
-        returnObject(serialization);
+        pool.returnObject(serialization);
     }
 
     public <T> byte[] serialize(T object) {
