@@ -67,7 +67,7 @@ Implementing a new `Serialization`:
  } 
  ```
 
-## Add as dependecy
+## Add as dependency
 
 Add `jitpack.io` as repository. 
 
@@ -87,8 +87,8 @@ dependencies {
 
 ## Build from source
 
-If you want to build `binflux-serialization-all-{version}.jar` from source, clone this repository and run `./gradlew buildBinfluxSerialization`. 
-The output-file will be in the directory: `/build/libs/binflux-serialization-all-{version}.jar`
-Gradle downloads the required dependencies and inserts all components into the output-file.
-If you are interested in the build task, look at [build.gradle](https://github.com/BinfluxDev/binflux-serialization/blob/master/build.gradle).
+* Clone repository
+* Run `./gradlew buildApp`
+* Output `/build/libs/binflux-serialization-{version}-all.jar` 
+* Build task [build.gradle](https://github.com/BinfluxDev/binflux-serialization/blob/master/build.gradle)
 
