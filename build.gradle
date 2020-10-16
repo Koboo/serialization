@@ -1,7 +1,6 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.4.10'
-    id 'maven-publish'
 }
 
 repositories {
@@ -17,22 +16,6 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
-    }
-}
-publishing {
-    repositories {
-        maven {
-            url = uri("https://maven.pkg.github.com/BinfluxDev/" + project.name)
-            credentials {
-                username = 'Koboo'
-                password = System.getenv('GITHUB_TOKEN')
-            }
-        }
-    }
-    publications {
-        maven(MavenPublication) {
-            from components.java
-        }
     }
 }
 
