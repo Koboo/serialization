@@ -15,14 +15,16 @@ libraries into a pool to serialize or deserialize objects in byte arrays easily 
 
 Creating a new `SerializerPool` instance using standard `JavaSerialization.class`:
 
-    SerializerPool pool = new SerializerPool(JavaSerialzation.class);
+```java
+SerializerPool pool = new SerializerPool(JavaSerialzation.class);
 
-    String string = new String("Lorem ipsum dolor sit amet.");
+String string = new String("Lorem ipsum dolor sit amet.");
     
-    byte[] serialized = pool.serialize(string);
+byte[] serialized = pool.serialize(string);
     
-    String deserialized = pool.deserialize(serialized);
-    
+String deserialized = pool.deserialize(serialized);
+```
+
 If something goes wrong during de- or serialization, the exception is thrown and instead of the object you get `null`.
 
 ## Implemented Serialization
