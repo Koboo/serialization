@@ -8,8 +8,8 @@ libraries into a pool to serialize or deserialize objects in byte arrays easily 
 * [Usage](#usage)
 * [Implemented Serialization](#implemented-serialization)
 * [Implement new Serialization](#implement-serialization)
-* [Add as dependency](#add-as-dependecy)
-* [Build from souce](#build-from-source)
+* [Add as dependency](#add-as-dependency)
+* [Build from source](#build-from-source)
 
 ## Usage
 
@@ -75,14 +75,14 @@ Add `jitpack.io` as repository.
 
 ```java
 repositories {
-    maven { url 'https://jitpack.io' }
+    maven { url 'https://maven.pkg.github.com/BinfluxDev/binflux-serialization' }
 }
 ```
 
 And add it as dependency. (e.g. `1.0` is the release-version)
 ```java
 dependencies {
-    implementation 'com.github.BinfluxDev:binflux-serialization:1.0'
+    compile 'eu.binflux:binflux-serialization:1.0'
 }
 ```
 
