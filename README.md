@@ -71,7 +71,7 @@ Implementing a new `Serialization`:
 
 ## Add as dependency
 
-Add `jitpack.io` as repository. 
+Add `repo.levenproxy.eu` as repository. 
 
 ```java
 repositories {
