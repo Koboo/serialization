@@ -13,15 +13,6 @@ compileTestKotlin {
         jvmTarget = "1.8"
     }
 }
-task buildApp(type: Jar) {
-    baseName = project.name + '-all'
-    from {
-        configurations.compile.collect {
-            it.isDirectory() ? it : zipTree(it)
-        }
-    }
-    with jar
-}
 publishing {
     repositories {
         maven {
@@ -42,7 +33,6 @@ publishing {
 repositories {
     mavenCentral()
     maven { url 'https://jitpack.io/' }
-    maven { url 'https://repo.levenproxy.eu/releases' }
 }
 
 dependencies {
@@ -58,4 +48,4 @@ dependencies {
 }
 
 group 'eu.binflux'
-version '1.1.6-release'
+version '1.1.7-release'
