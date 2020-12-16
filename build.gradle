@@ -1,22 +1,12 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '1.4.10'
     id 'maven-publish'
 }
-compileKotlin {
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-}
-compileTestKotlin {
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-}
+
 publishing {
     repositories {
         maven {
-            name = 'binflux-repository'
+            name = 'binflux'
             url = 'https://repo.levenproxy.eu/releases'
             credentials {
                 username = System.getenv('REPO_USER')
@@ -30,22 +20,19 @@ publishing {
         }
     }
 }
+
 repositories {
     mavenCentral()
-    maven { url 'https://jitpack.io/' }
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-
     compile 'org.apache.commons:commons-pool2:2.9.0'
 
     compile 'org.mapdb:elsa:3.0.0-M7'
     compile 'com.caucho:hessian:4.0.38'
-    compile 'com.github.romix:quickser:master-SNAPSHOT'
     compile 'de.ruedigermoeller:fst:2.56'
     compile 'com.esotericsoftware:kryo:5.0.0-RC9'
 }
 
 group 'eu.binflux'
-version '1.1.7-release'
+version '1.1.8'
