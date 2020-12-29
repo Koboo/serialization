@@ -31,7 +31,7 @@ dependencies {
     compile 'org.mapdb:elsa:3.0.0-M7'
     compile 'com.caucho:hessian:4.0.38'
     compile 'de.ruedigermoeller:fst:2.56'
-    compile 'com.esotericsoftware:kryo:5.0.0-RC9'
+    compile 'com.esotericsoftware:kryo:5.0.3'
 }
 
 group 'eu.binflux'
