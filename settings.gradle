@@ -1,2 +1,8 @@
-rootProject.name = 'binflux-serialization'
+rootProject.name = 'binflux-serial'
+include 'serial-elsa'
+include 'serial-fst'
+include 'serial-hessian'
+include 'serial-kryo'
+include 'serial-quickser'
+include 'serial-core'
 
