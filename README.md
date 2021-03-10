@@ -1,6 +1,6 @@
 ![Binflux-Serialization](binflux-serialization.png)
 
-Binflux-Serialization implements different Java serialization 
+Serialization implements different Java serialization 
 libraries into a pool to serialize or deserialize objects in byte arrays easily & quickly.
 
 ## Overview

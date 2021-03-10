@@ -1,4 +1,4 @@
-rootProject.name = 'binflux-serial'
+rootProject.name = 'serialization'
 include 'serial-elsa'
 include 'serial-fst'
 include 'serial-hessian'

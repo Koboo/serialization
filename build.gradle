@@ -2,7 +2,7 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'maven-publish'
 
-    group 'eu.binflux'
+    group 'eu.koboo'
     version '1.2.1'
 
     repositories {
@@ -11,15 +11,14 @@ subprojects {
             url 'https://jitpack.io/'
         }
         maven {
-            url 'https://repo.levenproxy.eu/releases'
+            url 'https://repo.koboo.eu/releases'
         }
     }
 
     publishing {
         repositories {
             maven {
-                name = 'binflux-repository'
-                url = 'https://repo.levenproxy.eu/releases'
+                url = 'https://repo.koboo.eu/releases'
                 credentials {
                     username = System.getenv('REPO_USER')
                     password = System.getenv('REPO_TOKEN')
