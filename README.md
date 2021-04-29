@@ -75,22 +75,28 @@ Add `repo.levenproxy.eu` as repository.
 
 ```java
 repositories {
-    maven { url 'https://repo.levenproxy.eu/releases' }
+    maven { url 'https://repo.koboo.eu/releases' }
 }
 ```
 
-And add it as dependency. (e.g. `1.0` is the release-version)
+And add specific serializer as dependency. (e.g. `1.0` is the release-version)
 ```java
 dependencies {
-    compile 'eu.binflux:binflux-serialization:1.0'
+    // !Always needed!
+    compile 'eu.koboo:serial-core:1.0'
+    // Select specific serializer
+    compile 'eu.koboo:serial-elsa:1.0'
+    compile 'eu.koboo:serial-fst:1.0'
+    compile 'eu.koboo:serial-hessian:1.0'
+    compile 'eu.koboo:serial-kryo:1.0'
+    compile 'eu.koboo:serial-quickser:1.0'
 }
 ```
-
 
 ## Build from source
 
 * Clone repository
 * Run `./gradlew buildApp`
-* Output `/build/libs/binflux-serialization-{version}-all.jar` 
-* Build task [build.gradle](https://github.com/BinfluxDev/binflux-serialization/blob/master/build.gradle)
+* Output `/build/libs/serialization-{version}-all.jar` 
+* Build task [build.gradle](https://github.com/Koboo/serialization/blob/master/build.gradle)
 
