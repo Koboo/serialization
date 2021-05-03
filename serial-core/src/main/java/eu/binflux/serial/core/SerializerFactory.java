@@ -12,7 +12,6 @@ public class SerializerFactory extends BasePooledObjectFactory {
         this.classOfSerial = classOfSerial;
     }
 
-
     @Override
     public Object create() throws Exception {
         return classOfSerial.newInstance();
