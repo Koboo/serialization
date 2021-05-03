@@ -71,7 +71,7 @@ Implementing a new `Serialization`:
 
 ## Add as dependency
 
-Add `repo.levenproxy.eu` as repository. 
+Add `repo.koboo.eu` as repository. 
 
 ```java
 repositories {
