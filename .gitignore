@@ -1,8 +1,3 @@
-/.gradle/
-/.idea/
-/build/
-/serial-core/build/
-/serial-elsa/build/
-/serial-fst/build/
-/serial-hessian/build/
-/serial-kryo/build/
+.gradle
+.idea
+build
